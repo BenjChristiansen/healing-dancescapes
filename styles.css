@@ -166,3 +166,6 @@ form button:hover {
 .contact-icons a:hover {
   color: #2a8a72;
 }
+
+p {
+  margin-bottom: 20px;}
