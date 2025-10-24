@@ -59,13 +59,21 @@ img {
   display: block;
 }
 
+#dancer_logo {
+  margin-top: 20px; 
+  padding: 0;
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 h2 {
   margin-top: 20px;
   margin-bottom: 20px;
 }
 
-#intro, #about {
-  padding: 60px 20px;
+#intro {
+  padding: 0px;
 }
 
 #about {
@@ -169,3 +177,40 @@ form button:hover {
 
 p {
   margin-bottom: 20px;}
+
+  .logo-container {
+    position: relative;
+    width: 294px; 
+    height: 359px; 
+    margin: 0 auto;
+  }
+  
+  #dancer_logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    z-index: 1;
+    margin: 0;
+    display: inline;
+  
+  
+  }
+  
+  #dancer_overlay {
+      position: absolute;
+    top: 0;
+    left: 0;
+    width: 294px;
+    height: 359px;
+    z-index: 999;
+  
+  }
+  
+  /*hiding svg overlay*/
+  #dancer_overlay .s0 {
+    fill: transparent;
+    pointer-events: auto;
+  }
+  
