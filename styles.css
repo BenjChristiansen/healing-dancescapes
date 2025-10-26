@@ -1,33 +1,55 @@
+/* ================================
+   RESET & BASE STYLES
+================================ */
 * {
-  font-family: Roboto, Arial, Helvetica, sans-serif;
+  font-family: Bad Script, Arial, Helvetica, sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
 html {
-  scroll-behavior: smooth; 
+  scroll-behavior: smooth;
 }
 
 body {
   background-color: #287474;
-  color: #a3d7ca;
+  color: #a3d7ca; 
 }
 
+
+/* ================================
+   TYPOGRAPHY
+================================ */
+h1 {
+  font-size: 2rem;
+ 
+}
+
+h2 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-family: 'Oswald', sans-serif;
+  font-style: normal;
+  font-weight: 200;
+  color: #ffffff;
+  text-align:center;
+}
+
+
+/* ================================
+   HEADER & NAVIGATION
+================================ */
 header {
   position: sticky;
   top: 0;
   z-index: 1000;
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: center;
   background-color: #0e3a33;
   padding: 20px;
   border-bottom: 2px solid #1b5e54;
-}
-
-h1 {
-  font-size: 2rem;
 }
 
 nav ul {
@@ -46,6 +68,19 @@ nav a:hover {
   text-decoration: underline;
 }
 
+#menu-toggle {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: #a3d7ca;
+  cursor: pointer;
+}
+
+
+/* ================================
+   IMAGES & LOGO
+================================ */
 img {
   display: block;
   margin: 20px auto;
@@ -53,177 +88,102 @@ img {
   max-width: 100%;
 }
 
-#logo {
-  height: 100px;
-  width: auto;
-  display: block;
-}
-
 #dancer_logo {
-  margin-top: 20px; 
-  padding: 0;
-  display: block;
-  max-width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
   height: auto;
+  z-index: 1;
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
 }
 
-h2 {
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
 
-#intro {
-  padding: 0px;
+/* ================================
+   LAYOUT & SECTIONS
+================================ */
+section, #intro, #about {
+  scroll-margin-top: 120px;
 }
 
 #about {
   background-color: #3EBB9E;
 }
 
-section, #intro, #about {
-  scroll-margin-top: 120px;}
 
-  .contact-icons a {
-    color: black;       
-    font-size: 1.5rem;    
-    margin-right: 15px; 
-    text-decoration: none; 
-  }
-  
-  .contact-icons a:hover {
-    color: #0e3a33;      
-  }
-
-  
-form {
-  max-width: 600px;
-  margin: 40px auto;          
-  padding: 30px;
-  background-color: #f2f2f2;  
-  border-radius: 15px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  color: #0e3a33;             
-  font-family: Roboto, Arial, sans-serif;
+/* ================================
+   LOGO OVERLAY
+================================ */
+.logo-container {
+  position: relative;
+  width: 294px;
+  height: 359px;
+  margin: 20px auto;
 }
 
-form h2 {
-  text-align: center;
-  margin-bottom: 20px;
+#dancer_overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 294px;
+  height: 359px;
+  z-index: 2;
+  pointer-events: auto;
 }
 
-form label {
-  display: block;
-  margin-top: 15px;
-  font-weight: 500;
+#dancer_overlay .s0 {
+  fill: transparent;
+  pointer-events: auto;
 }
 
-form input,
-form select,
-form textarea {
-  width: 100%;
-  padding: 10px 15px;
-  margin-top: 5px;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  font-size: 1rem;
-  font-family: inherit;
-  box-sizing: border-box;
-}
 
-form input:focus,
-form select:focus,
-form textarea:focus {
-  border-color: #3EBB9E;
-  outline: none;
-  box-shadow: 0 0 5px rgba(62, 187, 158, 0.5);
-}
-
-form button {
-  display: block;
-  width: 100%;
-  padding: 12px;
-  margin-top: 20px;
-  background-color: #3EBB9E;
-  color: white;
-  font-size: 1.1rem;
-  font-weight: bold;
+/* ================================
+   TOOLTIP
+================================ */
+#tooltip {
+  position: absolute;
+  background: transparent;
   border: none;
-  border-radius: 12px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+  padding: 4px 8px;
+  border-radius: 4px;
+  white-space: nowrap;
+  transition: opacity 0.2s ease;
+  box-shadow: none;
+  display: none;
+  pointer-events: none;
+  font-family: 'Oswald',sans-serif;
+  font-size: 16px;
+  color: #ffffff;
+  z-index: 1000;
 }
 
-form button:hover {
-  background-color: #2a8a72;
-}
+/* ================================
+   MEDIA QUERIES
+================================ */
 
-
-.contact-icons {
-  text-align: center;
-  margin-bottom: 25px;
-}
-
-.contact-icons a {
-  color: #3EBB9E;
-  font-size: 2rem;
-  margin: 0 15px;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.contact-icons a:hover {
-  color: #2a8a72;
-}
-
-p {
-  margin-bottom: 20px;}
-
-  .logo-container {
-    position: relative;
-    width: 294px; 
-    height: 359px; 
-    margin: 0 auto;
+@media (max-width: 768px) {
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
   }
-  
-  #dancer_logo {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: auto;
-    z-index: 1;
-    margin: 0;
-    display: inline;
-  
-  
+
+  #menu-toggle {
+    display: block;
+    margin-left: auto;
   }
-  
-  #dancer_overlay {
-      position: absolute;
-    top: 0;
-    left: 0;
-    width: 294px;
-    height: 359px;
-    z-index: 2;
-    pointer-events: auto;
-  
-  }
-  
-  /*hiding svg overlay*/
-  #dancer_overlay .s0 {
-    fill: transparent;
-    pointer-events: auto;
-  }
-  
-  #tooltip {
-    position: absolute;
-    background: white;
-    border: 1px solid #ccc;
-    padding: 5px 10px;
-    border-radius: 4px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+
+  nav ul {
     display: none;
-    pointer-events: none;
-    font-family: sans-serif;
-    font-size: 14px;
-    z-index: 1000;}
+    flex-direction: column;
+    background-color: #0e3a33;
+    padding: 10px;
+  }
+
+  nav ul.show {
+    display: flex;
+  }
+}
+
