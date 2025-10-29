@@ -22,18 +22,24 @@ body {
    TYPOGRAPHY
 ================================ */
 h1 {
-  font-size: 2rem;
+  font-size: 3rem;
  
 }
 
 h2 {
-  margin-top: 20px;
+  margin-top: 40px;
   margin-bottom: 20px;
   font-family: 'Oswald', sans-serif;
   font-style: normal;
   font-weight: 200;
   color: #ffffff;
   text-align:center;
+}
+
+h1, h2 {
+  white-space: nowrap;
+  overflow: visible;
+  text-overflow: unset;
 }
 
 
@@ -62,6 +68,7 @@ nav a {
   text-decoration: none;
   color: #a3d7ca;
   font-weight: 500;
+  font-size: 1.2rem;
 }
 
 nav a:hover {
@@ -77,6 +84,21 @@ nav a:hover {
   cursor: pointer;
 }
 
+#fancy-heading {
+  display: block;
+  text-align: center;
+  width: 100%;
+}
+
+.fade-in-word {
+  opacity: 0;
+  display: inline-block;
+  transition: opacity 1s ease;
+  font-style: normal;
+  font-weight: 200;
+  font-family: 'Oswald', sans-serif;
+  color: #ffffff;
+}
 
 /* ================================
    IMAGES & LOGO
@@ -89,15 +111,12 @@ img {
 }
 
 #dancer_logo {
-  position: absolute;
-  top: 0;
-  left: 0;
+  position: relative;
   width: 100%;
   height: auto;
+  display: block;
   z-index: 1;
-  margin: 0;
-  padding: 0;
-  max-width: 100%;
+  box-shadow: 0 0 10px rgba(40, 116, 116, 0.3); 
 }
 
 
@@ -118,20 +137,21 @@ section, #intro, #about {
 ================================ */
 .logo-container {
   position: relative;
-  width: 294px;
-  height: 359px;
-  margin: 20px auto;
+  width: 60vw; 
+  max-width: 400px;
+  margin: 40px auto;
 }
 
 #dancer_overlay {
   position: absolute;
   top: 0;
   left: 0;
-  width: 294px;
-  height: 359px;
+  width: 100%;
+  height: auto;
   z-index: 2;
   pointer-events: auto;
 }
+
 
 #dancer_overlay .s0 {
   fill: transparent;
@@ -144,20 +164,25 @@ section, #intro, #about {
 ================================ */
 #tooltip {
   position: absolute;
-  background: transparent;
-  border: none;
-  padding: 4px 8px;
-  border-radius: 4px;
-  white-space: nowrap;
-  transition: opacity 0.2s ease;
-  box-shadow: none;
-  display: none;
-  pointer-events: none;
-  font-family: 'Oswald',sans-serif;
-  font-size: 16px;
+  background-color: #0e3a33;
   color: #ffffff;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  display: none;
+  pointer-events: auto;
   z-index: 1000;
+  transition: opacity 0.2s ease;
 }
+
+#tooltip a {
+  color: #ffffff;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
 
 /* ================================
    MEDIA QUERIES
@@ -187,3 +212,33 @@ section, #intro, #about {
   }
 }
 
+@media (min-width: 1024px) {
+  .logo-container {
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 769px) {
+  h1 {
+    font-size: clamp(1.5rem, 6vw, 2.5rem);
+  }
+
+  h2 {
+    font-size: clamp(1rem, 5vw, 2rem);
+  }
+}
+@media (max-width: 600px) {
+  h2 {
+    display: none !important;
+  }
+}
