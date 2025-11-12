@@ -85,3 +85,18 @@ document.addEventListener("DOMContentLoaded", function () {
     navMenu.classList.toggle("show");
   });
 });
+
+const headshot = document.getElementById('headshot');
+const originalSrc = 'site-assets/headshot.jpeg';
+const hoverSrc = 'site-assets/fallingintogreen.png';
+
+const preload = new Image();
+preload.src = hoverSrc;
+
+headshot.addEventListener('mouseenter', () => {
+  headshot.src = hoverSrc;
+});
+
+headshot.addEventListener('mouseleave', () => {
+  headshot.src = originalSrc;
+});

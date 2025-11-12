@@ -190,12 +190,12 @@ form button:hover {
 img {
   display: block;
   margin: 20px auto;
-  border-radius: 20px;
   max-width: 100%;
 }
 #header_logo{
   max-width: 120px;
   height: auto;
+  margin: auto;
 }
 #dancer_logo {
   position: relative;
@@ -205,6 +205,116 @@ img {
   z-index: 1;
   box-shadow: 0 0 10px rgba(40, 116, 116, 0.3); 
 }
+.worked-with {
+  display: flex;
+  justify-content: center; 
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 15px; 
+  background-color: #0e3a33;
+  margin-top: 20px;
+}
+
+.worked-with h2 {
+font-size: 2rem;
+margin: 0;
+white-space: nowrap;
+}
+
+.worked-with a {
+display: inline-block;}
+
+.worked-with img {
+  height: 40px; 
+  width: auto;
+  object-fit: contain;
+  filter: grayscale(100%);
+  mix-blend-mode: screen;
+}
+
+.worked-with img:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+  filter: none;
+}
+.about {
+  display: flex;
+  flex-direction: row;       
+  align-items: center;      
+  gap: 2rem;                
+  background-color: #BCBAA6;
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 800px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+#headshot {
+  max-width: 250px;          
+  height: auto;
+  margin: 0;                 
+}
+
+.about h2, .about p {
+  color: #333;
+  text-align: left;         
+}
+
+.about-text {
+  flex: 1;                   
+}
+.about p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  letter-spacing: 0.05em;
+}
+
+.about p a {
+  color: #287474;
+}
+
+#headshot {
+  max-width: 300px;
+  height: auto;
+  margin: 20px 0;
+}
+
+.resume-actions {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap; 
+  
+  justify-content: flex-start;
+  width: 100%; 
+
+}
+
+.resume-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1rem;
+  background-color: #287474;
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.resume-btn i {
+  font-size: 1.2rem;
+}
+
+.resume-btn:hover {
+  background-color: #1b5e54;
+}
+
+
+
 
 
 /* ================================
@@ -298,6 +408,12 @@ section, #intro, #about {
     display: flex;
   }
 }
+@media (max-width: 600px) {
+  .worked-with {
+    flex-direction: column;
+    align-items: center; 
+  }
+}
 
 @media (min-width: 1024px) {
   .logo-container {
@@ -324,6 +440,19 @@ section, #intro, #about {
     font-size: clamp(1rem, 5vw, 2rem);
   }
 }
+
+@media (max-width: 768px) {
+  .about {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-text {
+    text-align: center;
+  }
+}
+
+
 @media (max-width: 600px) {
   h2 {
     display: none !important;

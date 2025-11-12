@@ -13,12 +13,13 @@
        <link rel="preconnect" href="https://fonts.googleapis.com">
  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
  <link href="https://fonts.googleapis.com/css2?family=Bad+Script&family=Oswald:wght@200..700&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Staatliches&display=swap" rel="stylesheet">
-     </head>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
  
     <body>
         <header>
             <h1>Healing Dancescapes</h1>
-            <img id="header_logo" alt="dance_logo" src="site assets/dance_logo_no_background.png">
+            <img id="header_logo" alt="dance_logo" src="site-assets/dance_logo_no_background.png">
             <button id="menu-toggle" aria-label ="Toggle navigation">&#9776;</button>
             <nav id="nav-menu">
                 <ul>
@@ -29,9 +30,46 @@
                 </ul>
             </nav>
         </header>
-        <h2>Hi, I'm Jordan White.</h2>
-      <img id="headshot" alt="headshot" src="site assets/headshot.jpeg">
-      <h2>What I Do</h2>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea numquam saepe quod repellendus nemo animi corrupti, facere aliquam, officiis eius porro sit. Necessitatibus, neque debitis? Impedit animi doloremque natus aspernatur.</p>
-
+        <section id = "experience">
+            <div class="worked-with">
+               <h2> I Have Peformed or Taught Dance For:</h2>
+            <a href="https://mtna.org" alt="mtna_logo" target="_blank"><img src="https://www.mtna.org/app_themes/austin_responsive_mtna/images/transparentmtna_logosmall.png" alt="mtna.org"></a>
+              <a href="https://acda.dance" alt="acda_logo" target="_blank">
+            <img src="https://www.acda.dance/wp-content/uploads/2025/08/2025-National-Festival-Email-Header-1.png"></a>
+             <a href="https://weber.edu" alt="weber_logo" target="_blank">
+             <img src="https://www.weber.edu/ui/images/wsu-logo.svg"></a>
+              <a href="https://imagineballet.org/rocky-mountain-choreography-festival/" alt="imagine_ballet_logo" target="_blank">
+                <img src="https://imagineballet.org/wp-content/uploads/2011/08/Imagine-LOGO2007.bmp"></a>
+              <a href="https://wsd.net" alt="wsd_logo" target ="_blank">
+            <img src="https://cmsv2-assets.apptegy.net/uploads/24978/logo/27791/WSD_Logo_4c_notag.png"></a>
+              <a href="https://davis.k12.ut.us" alt="dsd_logo" target="_blank">
+            <img src="https://cmsv2-assets.apptegy.net/uploads/21917/logo/24731/logo_Davis-web-complete.png"></a>
+              <a href="https://disneyland.disney.go.com" alt="disneyland_logo" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Disneyland_Park_Logo.svg/200px-Disneyland_Park_Logo.svg.png"></a>
+            </div>
+            <section class="about">
+                <img id="headshot" alt="headshot" src="site-assets/headshot.jpeg">
+               <div class="about-text">
+                 <h2>Hi, I'm Jordan White.</h2>
+                 <p>I am a <b>dancer with a passion for</b> sharing the benefits of movement and it's healing properties. <b>Engaging with the community through teaching dance</b> is what brings me joy! I currently volunteer with assisted living facilities and community centers. I am always looking to expand my reach to create inclusive learning environments whenever the opportunity arises. I believe in Diversity, Equity & Inclusion. <b>If I can be of service to you, please <a href="contact.html">contact</a> me</b>.</p>
+                 
+                 <h2>Resume</h2>
+                 <div class="resume-actions">
+                   <a href="site-assets/Jordan_White_Resume.pdf" target="_blank" class="resume-btn">
+                     <i class="fas fa-eye"></i> View
+                   </a>
+                   <a href="site-assets/Jordan_White_Resume.pdf" download class="resume-btn">
+                     <i class="fas fa-download"></i> Download
+                   </a>
+                   <button onclick="window.open('site-assets/Jordan_White_Resume.pdf', '_blank')" class="resume-btn">
+                    <i class="fas fa-print"></i> Print
+                  </button>
+                  
+                 </div>
+               </div>
+             </section>
+                
+                
+                
+                 <script src="script.js"></script>
 </body>
