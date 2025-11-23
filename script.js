@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", function () {
     for (let i = 0; i < segment.count; i++) {
       const span = document.createElement("span");
       span.innerHTML = words[wordIndex] + "&nbsp;";
-      span.classList.add("fade-in-word");
+      span.classList.add("fade-in-word", "oswald-light");
       span.style.transitionDelay = `${segment.delay * 1}s`; // 1s between segments
       heading.appendChild(span);
       wordIndex++;
