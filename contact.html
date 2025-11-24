@@ -1,71 +1,3 @@
-<template>
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <title>Healing Dancescapes</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!--Stylesheets-->
-        <link rel="stylesheet" href="styles.css">
-<!-- Google Fonts -->     
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bad+Script&family=Oswald:wght@200..700&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Staatliches&display=swap" rel="stylesheet">
-
- <!-- Icons -->  
-<link rel="stylesheet"       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" referrerpolicy="no-referrer" />
-    </head>
- 
-    <body>
-        <header class="flex space-between">
-            <h1>Healing Dancescapes</h1>
-            <img class="img-responsive center-img" id="header_logo" alt="dance_logo" src="site-assets/dance_logo_no_background.png">
-            <button id="menu-toggle" aria-label ="Toggle navigation">&#9776;</button> 
-            <nav id="nav-menu">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="#offerings">Offerings</a></li>
-                    <li><a href="#quote">Get A Quote</a></li>
-                </ul>
-            </nav>
-        </header>
-        <h2 class="oswald-light text-center">Contact</h2>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea numquam saepe quod repellendus nemo animi corrupti, facere aliquam, officiis eius porro sit. Necessitatibus, neque debitis? Impedit animi doloremque natus aspernatur.</p>
-        <div class="contact-icons">
-         
-            <a href="https://www.linkedin.com/in/yourprofile" target="_blank" rel="noopener">
-              <i class="fab fa-linkedin"></i>
-            </a>
-          
-         
-            <a href="tel:+1234567890">
-              <i class="fas fa-phone"></i>
-            </a>
-          </div>
-<form>
-    <label for="first-name">First Name:</label>
-    <input required type="text" id="first-name" name="first-name">
-<label for="last-name">Last Name:</label>
-    <input required type="text" id="last-name" name="last-name">
-<label for="email">Email:</label>
-    <input required type="email" id="email" name="email">
-    <label for="interested-in">Interested In:</label>
-    <select required id="interested-in" name="interested-in">
-        <option value="individual-in-person">Individual 60 Minute Session: In person</option>  
-        <option value="individual-virtual">Individual 60 Minute Session: Virtual</option>
-        <option value="group-in-person">Group 60 Minute Session: In Person</option>
-        <option value="group-virtual">Group 60 Minute Session: Virtual</option>
-        </select>
-        <label for="comments">Additional Comments or Questions:</label>
-        <textarea name="comments" rows="4" cols="50"></textarea>
-        <button type="submit">Submit</button>
-</form>
-</body> 
-</template>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -105,56 +37,73 @@
             </nav>
         </header>
         <h2 class="oswald-light text-center">Contact</h2>
-        <p>My dance sessions center around healing. I infuse meditation with movement to bring peace.I offer one on one and group options, in person or virtually on Zoom.My offerings are not limited to healing sessions, I can choreograph your wedding dance, teach a high energy number, coach and lots more. I am always looking for volunteer opportunities to connect with and serve the community. Tell me a little more about what I can do for you by submitting the form below. I look forward to connecting with you! </p>
-        <div class="contact-icons">
-         
-            <a href="https://www.linkedin.com/in/yourprofile" target="_blank" rel="noopener">
-              <i class="fab fa-linkedin"></i>
-            </a>
-          
-         
-            <a href="tel:+1234567890">
-              <i class="fas fa-phone"></i>
-            </a>
-          </div>
+        <p>My dance sessions center around healing. I infuse meditation with movement to bring peace, offering one on one and group options. My offerings are not limited to meditative healing sessions. I can choreograph your wedding dance, teach a high energy class, coach for your upcoming performance and much more. In addition, I am always looking for volunteer opportunities to connect with and serve the community. Tell me a little more about what I can do for you by submitting the form below. I look forward to connecting with you!  </p>
+        <h2 class="oswald-light text-center">Tell Me More About What I Can Do For You!</h2>
 <form>
+  <div class="form-row">
+    <div class="half">
     <label for="first-name">First Name:</label>
     <input class="full-width rounded" required type="text" id="first-name" name="first-name">
-<label for="last-name">Last Name:</label>
+  </div>
+  <div class="half">
+    <label for="last-name">Last Name:</label>
     <input class="full-width rounded" required type="text" id="last-name" name="last-name">
-<label for="email">Email:</label>
+  </div>
+  </div>
+  <div class="form-row">
+    <div class="half">
+    <label for="email">Email:</label>
 
     <input class="full-width rounded" required type="email" id="email" name="email">
-  <label for="phone">Phone:</label>
+  </div>
+  <div class="half">
+    <label for="phone">Phone:</label>
 
     <input class="full-width rounded" required type="tel" id="phone" name="phone">
-                                                     
+  </div>
+  </div>                                                 
   <fieldset class="services">
-    <label for="interested-in">Interested In:</label><br>
-    <label for="in-person">In Person Sessions:</label><br>
-    <input class="full-width rounded" type="checkbox" id="individual-in-person" name="individual-in-person" value="Individual In Person">
-     <label for="individual-in-person">60 Minute Individual Dance Meditation </label><br>
-    <input class="full-width rounded" type="checkbox" id="group-in-person" name="group-in-person" value="Group In Person">
-  <label for="group-in-person">60 Minute Group Dance Meditation </label><br>
-
-    <input class="full-width rounded" type="checkbox" id="wedding-in-person" name="wedding-in-person" value="Wedding Dance In Person">
-  <label for="wedding-in-person">Choreographed Wedding Dance</label><br>
-       <label for="virtual">Virtual Services (Done on Zoom): </label><br>
-    <input class="full-width rounded" type="checkbox" id="individual-virtual" name="individual-virtual" value="Individual Virtual">
-  <label for="individual-virtual">60 Minute Individual Dance Meditation </label><br>
     
-    <input class="full-width rounded" type="checkbox" id="group-virtual" name="group-virtual" value="Group Virtual">
-  <label for="group-virtual">60 Minute Group Dance Meditation</label><br>
-   
-  <label for="other">Something Else? Please Explain:</label><br>
-    <textarea class="full-width rounded" name="other" rows="4" cols="50"></textarea>
+  <p class="section-label"><u>What Are You Interested In?</u></p>
+    <p class="section-label">In-Person Sessions:</p>
+    <div class="chip-group">
+      <input type="checkbox" id="individual-in-person" name="individual-in-person" value="Individual In Person">
+      <label class="chip" for="individual-in-person">60 Min Individual Meditation</label>
   
+      <input type="checkbox" id="group-in-person" name="group-in-person" value="Group In Person">
+      <label class="chip" for="group-in-person">60 Min Group Meditation</label>
+  
+      <input type="checkbox" id="wedding-in-person" name="wedding-in-person" value="Wedding Dance In Person">
+      <label class="chip" for="wedding-in-person">Choreographed Wedding Dance</label>
+    </div>
+  
+    <p class="section-label">Virtual Sessions (Zoom):</p>
+    <div class="chip-group">
+      <input type="checkbox" id="individual-virtual" name="individual-virtual" value="Individual Virtual">
+      <label class="chip" for="individual-virtual">60 Min Individual Meditation</label>
+  
+      <input type="checkbox" id="group-virtual" name="group-virtual" value="Group Virtual">
+      <label class="chip" for="group-virtual">60 Min Group Meditation</label>
+    </div>
+  
+    <label class="section-label"for="other">Something Else? Please Explain:</label>
+    <textarea class="full-width rounded" name="other" id="other" rows="4"></textarea>
   </fieldset>
-  
-        <label for="comments">Additional Comments or Questions:</label>
+        <label class="section-label"for="comments">Additional Comments or Questions:</label>
 
     <textarea class="full-width rounded" name="comments" rows="4" cols="50"></textarea>    
   <button class="full-width btn-rounded"type="submit">Submit</button>
+  <div class="contact-icons">
+         
+    <a href="https://www.linkedin.com/in/yourprofile" target="_blank" rel="noopener">
+      <i class="fab fa-linkedin"></i>
+    </a>
+  
+ 
+    <a href="tel:+1234567890">
+      <i class="fas fa-phone"></i>
+    </a>
+  </div>
 </form>
 <script src="script.js"></script>
 </body>
