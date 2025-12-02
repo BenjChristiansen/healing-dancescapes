@@ -41,11 +41,16 @@ h1, h2 {
 
 p{
   color: white;
-  font-size: 1.5em;
-  padding: 30px 20px 30px 20px;
  letter-spacing: 1.5px;
   font-weight: 200;
-}
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    line-height: 1.6;
+    max-width: 750px;
+    margin: 0 auto 1.5rem auto;
+    padding: 0 1rem;
+    text-align: center;
+  }
+  
 
 .oswald-light {
   font-family: 'Oswald', sans-serif;
@@ -75,7 +80,6 @@ nav ul li a {
 
 nav ul {
   list-style: none;
-  /*DELETED ADDED CLASS OF "FLEX" TO NAV UL HTML*/
   display: flex;
   gap: 20px;
 }
@@ -374,8 +378,12 @@ display: inline-block;}
   padding: 2rem;
   margin: 2rem auto;
   max-width: 800px;
+  display: flex;
+  gap: 2rem;
+  align-items: center;  
+  }
   
-}
+
 
 .about h2, .about p {
   color: #333;
@@ -389,7 +397,10 @@ display: inline-block;}
   font-size: 1.2rem;
   line-height: 1.6;
   letter-spacing: 0.05em;
-}
+  padding: 0;     
+  margin-top: 0;  
+  }
+  
 
 .about p a {
   color: #287474;
@@ -512,6 +523,39 @@ section, #intro, #about {
   font-weight: 500;
 }
 
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  40% {
+    transform: scale(1.22); 
+  }
+  60% {
+    transform: scale(1.18); 
+  }
+  100% {
+    transform: scale(1); 
+  }
+}
+
+#heart-wrapper.pulse {
+  animation-name: pulse;
+  animation-duration: 1s; 
+  animation-iteration-count: 4;
+  animation-timing-function: ease-in-out;
+  transform-origin: center; 
+}
+.heart-text {
+  font-family: "Oswald", sans-serif; 
+  font-size: 14px; 
+  fill: white; 
+  user-select: none; 
+  cursor:pointer;
+}
+
+
+
+
 /* ================================
    MEDIA QUERIES
 ================================ */
@@ -523,6 +567,7 @@ section, #intro, #about {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
   }
 
   #menu-toggle {
@@ -530,16 +575,49 @@ section, #intro, #about {
     margin-left: auto;
   }
 
+  nav {
+    width: 100%;
+    order: 3;
+    text-align: right;
+  }
+
   nav ul {
     display: none;
     flex-direction: column;
     background-color: #0e3a33;
-    padding: 10px;
+    padding: 10px 0;
+    width: 100%;
+    margin-top: 10px;
+    align-items: flex-end;
+    gap: 0;
+    padding-left: 10px;
   }
 
   nav ul.show {
     display: flex;
   }
+
+  nav ul li {
+    text-align: right;
+    width: 100%;
+    padding-left: 20px;
+  }
+  nav a {
+    background: none !important;
+    border: none !important;
+    color: #d9e7df !important;
+    padding: 10px 0;
+    font-size: 1.1rem;
+    width: 100%;
+    display: block;           
+    text-align: right;         
+  }
+  nav a:hover {
+    background: none !important;
+    color: #a3d7ca !important;  
+    border: none !important;
+  }
+
 
   /* Typography */
   h1 {
@@ -558,6 +636,7 @@ section, #intro, #about {
 
   .about-text {
     text-align: center;
+    font-size: 1.2rem;
   }
 }
 
@@ -568,7 +647,7 @@ section, #intro, #about {
     align-items: center;
   }
 
-  h2 {
+  #fancy-heading {
     display: none !important;
   }
 }
@@ -589,4 +668,5 @@ section, #intro, #about {
   .logo-container {
     max-width: 400px;
   }
+  
 }

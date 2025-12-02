@@ -1,21 +1,25 @@
+const tooltipTitles = {
+  heart: {text: "Click Here to Step Into Wellness", url: "index.html"},
+  rightArm: {text: "About", url: "about.html"},
+  head: "",
+  back: { text:"Contact Me", url: "contact.html"}, 
+  knee: { text:"Book A Session", url: "offerings.html"},
+  leftHand: "",
+  leftLeg: "",
+  rightFoot: "",
+}
+
+
+
+
+
 document.addEventListener("DOMContentLoaded", function () {
   const tooltip = document.getElementById("tooltip");
   const shapes = document.querySelectorAll(".s0");
   const container = document.querySelector(".logo-container");
 
-  const tooltipTitles = {
-    heart: {text: "Home", url: "index.html"},
-    rightArm: {text: "What I Do", url: "about.html"},
-    head: "",
-    back: { text:"Contact Me", url: "contact.html"}, 
-    knee: { text:"Book A Session", url: "offerings.html"},
-    leftHand: "",
-    leftLeg: "",
-    rightFoot: "",
-  };
-  
-
   shapes.forEach(shape => {
+    if (shape.id === "heart") return;
     shape.addEventListener("mousemove", function (e) {
       const data = tooltipTitles[shape.id];
       if (data && data.text) {
@@ -41,6 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
 //ADDED FOR ANIMATION OF H2 UPON PAGE LOAD
 document.addEventListener("DOMContentLoaded", function () {
   const heading = document.getElementById("fancy-heading");
@@ -75,6 +80,46 @@ document.addEventListener("DOMContentLoaded", function () {
   }, 100);
 });
   
+document.addEventListener("DOMContentLoaded", function() {
+  const heartWrapper = document.getElementById("heart-wrapper");
+
+  const heartText = tooltipTitles.heart.text;
+
+  setTimeout(() => {
+      heartWrapper.classList.add("pulse");
+
+      const svgText = document.createElementNS("http://www.w3.org/2000/svg", "text");
+      svgText.setAttribute("x", "180"); 
+      svgText.setAttribute("y", "103");  
+      svgText.setAttribute("text-anchor", "middle");
+      svgText.setAttribute("dominant-baseline", "middle");
+      svgText.classList.add("heart-text");
+      svgText.textContent = heartText;
+      const svgRect = document.createElementNS("http://www.w3.org/2000/svg", "rect");
+svgRect.setAttribute("x", 101);  // slightly left of the text
+svgRect.setAttribute("y", 92);  // slightly above the text
+svgRect.setAttribute("width", 160);  // adjust for text width
+svgRect.setAttribute("height", 20); // adjust for text height
+svgRect.setAttribute("rx", 4); // rounded corners
+svgRect.setAttribute("ry", 4);
+svgRect.setAttribute("fill", "#0A3C30"); // button color
+svgRect.setAttribute("fill-opacity", "0.7")
+svgRect.setAttribute("pointer-events", "none"); // ignore mouse
+heartWrapper.appendChild(svgRect);
+
+heartWrapper.addEventListener("click", () => {
+  window.location.href = "about.html"; // or tooltipTitles.heart.url if you want
+});
+
+      heartWrapper.appendChild(svgText);
+  }, 6000); 
+});
+
+
+
+
+
+
 
     /*Display menu if hamburger button clicked*/
  document.addEventListener("DOMContentLoaded", function () {
