@@ -426,7 +426,7 @@ display: inline-block;}
 
 }
 
-.resume-btn {
+.resume-btn, .contact-btn {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
@@ -470,6 +470,21 @@ section, #intro, #about {
 #about {
   background-color: #3EBB9E;
 }
+.questions-list  {
+  display: flex;
+  text-align: left;
+  justify-content: center;
+  width: 100%;
+  margin-top: 10px;
+}
+.questions-list li {
+  margin-bottom: 10px;
+  font-size: 20px;
+  color: white;
+}
+
+.questions-list p {
+text-align: left;}
 
 
 /* ================================
