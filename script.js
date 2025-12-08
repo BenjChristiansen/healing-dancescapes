@@ -2,8 +2,8 @@ const tooltipTitles = {
   heart: {text: "Click Here to Step Into Wellness", url: "index.html"},
   rightArm: {text: "About", url: "about.html"},
   head: "",
-  back: { text:"Contact Me", url: "contact.html"}, 
-  knee: { text:"Book A Session", url: "offerings.html"},
+  back: { text:"Book A Session", url: "contact.html"}, 
+  knee: { text:"FAQs", url: "faq.html"},
   leftHand: "",
   leftLeg: "",
   rightFoot: "",
@@ -144,4 +144,28 @@ headshot.addEventListener('mouseenter', () => {
 
 headshot.addEventListener('mouseleave', () => {
   headshot.src = originalSrc;
+});
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  const images = document.querySelectorAll(".gallery-img");
+  const modal = document.getElementById("modal");
+  const modalImg = document.getElementById("modal-img");
+  const modalClose = document.getElementById("modal-close");
+
+  images.forEach(img => {
+    img.addEventListener("click", () => {
+      modal.style.display = "flex";
+      modalImg.src = img.src;
+      modalImg.alt = img.alt;
+    });
+  });
+
+  modalClose.addEventListener("click", () => {
+    modal.style.display = "none";
+  });
+
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) modal.style.display = "none";
+  });
 });

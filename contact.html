@@ -31,14 +31,13 @@
                 <ul>
                     <li><a class="oswald-light" href="about.html">About</a></li>
                     <li><a class="oswald-light" href="contact.html"><u>Contact</u></a></li>
-                    <li><a class="oswald-light" href="#gallery">Gallery</a></li>
+                    <li><a class="oswald-light" href="gallery.html">Gallery</a></li>
                     <li><a class="oswald-light" href="faq.html">FAQs</a></li>
                 </ul>
             </nav>
         </header>
-        <h2 class="oswald-light text-center">Contact</h2>
-        <p>My dance sessions center around healing. I infuse meditation with movement to bring peace, offering one on one and group options. My offerings are not limited to meditative healing sessions. I can choreograph your wedding dance, teach a high energy class, coach for your upcoming performance and much more. In addition, I am always looking for volunteer opportunities to connect with and serve the community. Tell me a little more about what I can do for you by submitting the form below. I look forward to connecting with you!  </p>
         <h2 class="oswald-light text-center">Tell Me More About What I Can Do For You!</h2>
+        <p class="quote">"Forget your troubles and dance! Forget your sorrows and dance! Forget your sickness and dance! Forget your weakness and dance!" - Bob Marley</p>
 <form>
   <div class="form-row">
     <div class="half">
@@ -64,7 +63,7 @@
   </div>                                                 
   <fieldset class="services">
     
-  <p class="section-label"><u>What Are You Interested In?</u></p>
+
     <p class="section-label">In-Person Sessions:</p>
     <div class="chip-group">
       <input type="checkbox" id="individual-in-person" name="individual-in-person" value="Individual In Person">
@@ -92,7 +91,16 @@
         <label class="section-label"for="comments">Additional Comments or Questions:</label>
 
     <textarea class="full-width rounded" name="comments" rows="4" cols="50"></textarea>    
-  <button class="full-width btn-rounded"type="submit">Submit</button>
+    <div class="form-row agree-checkbox">
+      <input type="checkbox" id="agree" name="agree" required>
+      <label for="agree">
+        I agree to the 
+        <a href="terms.html" target="_blank">terms and conditions</a>
+      </label>
+    </div>
+    <div class="submit-wrapper">
+    <input type="submit" class="contact-btn" value="Submit">
+  </div>
   <div class="contact-icons">
          
     <a href="https://www.linkedin.com/in/jordanwhiteutah" target="_blank" rel="noopener">
@@ -102,6 +110,9 @@
  
     <a href="tel:+18018883793">
       <i class="fas fa-phone"></i>
+    </a>
+    <a href="mailto:jw@healingdancescapes.com">
+      <i class="fas fa-envelope"></i> 
     </a>
   </div>
 </form>

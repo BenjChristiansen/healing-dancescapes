@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery</title>
+  <link rel="stylesheet" href="styles.css">
+   <!--Google Fonts-->
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bad+Script&family=Oswald:wght@200..700&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Staatliches&display=swap" rel="stylesheet">    
+</head>
+<body>
+
+<header class="flex space-between">
+    <h1>Healing Dancescapes</h1>
+    <a href="index.html"><img class="img-responsive center-img" id="header_logo" alt="dance_logo" src="site-assets/dance_logo_no_background.png"></a>
+  <button id="menu-toggle">☰</button>
+  <nav>
+    <ul>
+      <li><a class="oswald-light" href="index.html">Home</a></li>
+      <li><a class="oswald-light" href="about.html">About</a></li>
+      <li><a class="oswald-light" href="gallery.html"><u>Gallery</u></a></li>
+      <li><a class="oswald-light" href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section class="text-center">
+    <h1 id="fancy-heading">Our Work and Creations</h1>
+    <p>Explore our visual collection. Click on any image to view it larger.</p>
+  </section>
+
+  <section class="flex wrap gap-15 center-block" id="gallery">
+    <!-- Gallery images -->
+    <img class="img-responsive rounded shadow-light gallery-img" src="site-assets/dance_in_nature.jpeg" alt="Dancing in Nature">
+    <img class="img-responsive rounded shadow-light gallery-img" src="site-assets/shadow_dancer.jpeg" alt="Dancing in the Shadows">
+    <img class="img-responsive rounded shadow-light gallery-img" src="site-assets/water_dance.jpeg" alt="Dancing in the Water">
+    <img class="img-responsive rounded shadow-light gallery-img" src="site-assets/gallery4.jpg" alt="Gallery Image 4">
+    <img class="img-responsive rounded shadow-light gallery-img" src="site-assets/gallery5.jpg" alt="Gallery Image 5">
+    <img class="img-responsive rounded shadow-light gallery-img" src="site-assets/gallery6.jpg" alt="Gallery Image 6">
+  </section>
+</main>
+
+<!-- Modal for larger images -->
+<div id="modal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.8); justify-content:center; align-items:center; z-index:2000;">
+  <span id="modal-close" style="position:absolute; top:20px; right:30px; font-size:2rem; color:white; cursor:pointer;">&times;</span>
+  <img id="modal-img" src="" alt="Large View" style="max-width:90%; max-height:90%; border-radius:10px; box-shadow:0 4px 10px rgba(0,0,0,0.5);">
+</div>
+
+<script src="gallery.js"></script>
+<script src="script.js"></script> 
+</body>
+</html>

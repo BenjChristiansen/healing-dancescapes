@@ -50,6 +50,9 @@ p{
     padding: 0 1rem;
     text-align: center;
   }
+  .quote{
+    font-style:italic;
+  }
   
 
 .oswald-light {
@@ -148,9 +151,10 @@ form {
   max-width: 600px;
   margin: 40px auto;          
   padding: 30px;
-  background-color: #f2f2f2;  
-  color: #0e3a33;             
-  font-family: Roboto, Arial, sans-serif;
+  background-color: #BCBAA6; 
+  color: #333;             
+  font-family: Oswaldo, Arial, sans-serif;
+
 }
 
 form h2 {
@@ -183,17 +187,6 @@ form textarea:focus {
   box-shadow: 0 0 5px rgba(62, 187, 158, 0.5);
 }
 
-form button {
-  padding: 12px;
-  margin-top: 20px;
-  background-color: #3EBB9E;
-  color: white;
-  font-size: 1.1rem;
-  font-weight: bold;
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
 
 form button:hover {
   background-color: #2a8a72;
@@ -285,11 +278,12 @@ border-radius: 12px;
   margin:auto;
   font-weight: bold;
   font-size: 1rem;
+  padding: 10px;
 }
 .section-label {
   font-size: 1.1rem;
   font-weight: 600;
-  color: #0b302b;
+  color: #333;
   margin: auto;
 }
 
@@ -299,6 +293,19 @@ fieldset {
   margin: 0;
   min-inline-size: auto; 
 }
+
+.submit-wrapper{
+  text-align:center;
+}
+
+.agree-checkbox a {
+  color: #287474; 
+  text-decoration: underline;
+}
+.agree-checkbox a:hover {
+  color: #1b5e54;
+}
+
 
 
 /* ================================
@@ -385,13 +392,18 @@ display: inline-block;}
   
 
 
-.about h2, .about p {
+.about h2 {
+  color: #333;
+  text-align: center;         
+}
+.about p{
   color: #333;
   text-align: left;         
-}
+} 
 
 .about-text {
-  flex: 1;                   
+  flex: 1; 
+  text-align: center;                  
 }
 .about p {
   font-size: 1.2rem;
@@ -405,6 +417,7 @@ display: inline-block;}
 .about p a {
   color: #287474;
 }
+
 
 #headshot {
   width: auto;
@@ -426,6 +439,14 @@ display: inline-block;}
 
 }
 
+.offerings-section, .contact-btn, .submit-btn {
+  display: inline-block;
+  margin: 1.5rem auto 0 auto;
+  text-decoration: none;
+}
+
+
+
 .resume-btn, .contact-btn {
   display: inline-flex;
   align-items: center;
@@ -445,7 +466,7 @@ display: inline-block;}
   font-size: 1.2rem;
 }
 
-.resume-btn:hover {
+.resume-btn:hover, .contact-btn:hover {
   background-color: #1b5e54;
 }
 
@@ -459,6 +480,19 @@ display: inline-block;}
 margin: 20px auto;
 }
 
+.gallery-img {
+  flex: 1 1 calc(33% - 1rem); 
+  max-width: calc(33% - 1rem);
+  height: auto;
+  object-fit: cover;  
+  cursor: pointer;   
+  transition: transform 0.3s ease;
+}
+
+.gallery-img:hover {
+  transform: scale(1.05); 
+}
+
 
 /* ================================
    LAYOUT & SECTIONS
@@ -470,21 +504,7 @@ section, #intro, #about {
 #about {
   background-color: #3EBB9E;
 }
-.questions-list  {
-  display: flex;
-  text-align: left;
-  justify-content: center;
-  width: 100%;
-  margin-top: 10px;
-}
-.questions-list li {
-  margin-bottom: 10px;
-  font-size: 20px;
-  color: white;
-}
 
-.questions-list p {
-text-align: left;}
 
 
 /* ================================
@@ -643,7 +663,7 @@ text-align: left;}
     font-size: 1.2rem;
   }
 
-  /* About section */
+ 
   .about {
     flex-direction: column;
     text-align: center;
