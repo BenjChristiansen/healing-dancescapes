@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", function () {
   heading.textContent = ""; 
 
   const segments = [
-    { count: 3, delay: 0 },
+    { count: 4, delay: 0 },
     { count: 4, delay: 2 },
     { count: 1, delay: 3.5 },
     { count: 5, delay: 5 }
@@ -127,9 +127,13 @@ heartWrapper.addEventListener("click", () => {
   const navMenu = document.querySelector("nav ul");
 
   toggle.addEventListener("click", function () {
+    const expanded = toggle.getAttribute("aria-expanded") === "true";
+    toggle.setAttribute("aria-expanded", String(!expanded));
     navMenu.classList.toggle("show");
   });
-});
+  
+  });
+
 
 const headshot = document.getElementById('headshot');
 const originalSrc = 'site-assets/headshot.jpeg';
@@ -147,7 +151,10 @@ headshot.addEventListener('mouseleave', () => {
 });
 
 
-document.addEventListener("DOMContentLoaded", function() {
+// ==============================
+// Gallery modal functionality
+// ==============================
+document.addEventListener("DOMContentLoaded", () => {
   const images = document.querySelectorAll(".gallery-img");
   const modal = document.getElementById("modal");
   const modalImg = document.getElementById("modal-img");
@@ -163,9 +170,15 @@ document.addEventListener("DOMContentLoaded", function() {
 
   modalClose.addEventListener("click", () => {
     modal.style.display = "none";
+    modalImg.src = "";
+    modalImg.alt = "";
   });
 
-  modal.addEventListener("click", (e) => {
-    if (e.target === modal) modal.style.display = "none";
+  modal.addEventListener("click", e => {
+    if (e.target === modal) {
+      modal.style.display = "none";
+      modalImg.src = "";
+      modalImg.alt = "";
+    }
   });
 });

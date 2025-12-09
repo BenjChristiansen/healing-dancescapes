@@ -2,7 +2,8 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Healing Dancescapes</title>
+      <title>Contact Healing Dancescapes – Book a Somatic Dance Session</title>
+        <meta name="description" content="Contact Healing Dancescapes to Book A Somatic Dance Session, Wedding Choreography and More in Ogden, Utah.">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
@@ -10,24 +11,49 @@
       <link rel="stylesheet" href="styles.css">
          
  <!-- Google Fonts -->     
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bad+Script&family=Oswald:wght@200..700&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Staatliches&display=swap" rel="stylesheet">
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
  
-
+ <link href="https://fonts.googleapis.com/css2?family=Bad+Script&family=Oswald:wght@200..700&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Staatliches&display=swap" rel="stylesheet">
  <!-- Icons -->  
-<link rel="stylesheet"       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" referrerpolicy="no-referrer" />
-    </head>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+    <!--Open-Graph-->  
+<meta property="og:title" content="Healing Dancescapes" />
+<meta property="og:description" content="Somatic movement and healing through dance-inspired practices." />
+<meta property="og:image" content="site-assets/dance_logo_no_background.png" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://healingdancescapes.com/" />
+<!--Favicon-->
+<link rel="icon" href="site-assets/favicon.png" type="image/png">
+<!--Business Schema-->
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Healing Dancescapes",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Ogden",
+      "addressRegion": "UT",
+      "addressCountry": "USA"
+    },
+    "url": "https://healingdancescapes.com",
+    "description": "Somatic dance sessions, meditative movement, and dance-based healing in Ogden, Utah.",
+    "image": "https://healingdancescapes.com/site-assets/dance_logo_no_background.png"
+  }
+</script>
+</head>
  
     <body>
         <header class="flex space-between">
             <h1>Healing Dancescapes</h1>
-               <a href="index.html"><img class="img-responsive center-img" id="header_logo" alt="dance_logo" src="site-assets/dance_logo_no_background.png"></a>
+            <h1 class="visually-hidden">
+              Healing Dancescapes — Somatic Movement, Embodied Healing & Dance Therapy
+            </h1>
+               <a href="index.html" rel="noopener noreferrer"><img class="img-responsive center-img" id="header_logo" alt="Healing Dancescapes Logo" src="site-assets/dance_logo_no_background.png"></a>
                <button id="menu-toggle" aria-label ="Toggle navigation">&#9776;</button> 
-               <nav id="nav-menu" class="flex">
+               <nav id="nav-menu" class="flex" aria-expanded="false">
                 <ul>
                     <li><a class="oswald-light" href="about.html">About</a></li>
                     <li><a class="oswald-light" href="contact.html"><u>Contact</u></a></li>
@@ -62,8 +88,7 @@
   </div>
   </div>                                                 
   <fieldset class="services">
-    
-
+    <legend class="visually-hidden">Service Selection Options</legend>
     <p class="section-label">In-Person Sessions:</p>
     <div class="chip-group">
       <input type="checkbox" id="individual-in-person" name="individual-in-person" value="Individual In Person">
@@ -90,12 +115,12 @@
   </fieldset>
         <label class="section-label"for="comments">Additional Comments or Questions:</label>
 
-    <textarea class="full-width rounded" name="comments" rows="4" cols="50"></textarea>    
+    <textarea class="full-width rounded" id="comments" name="comments" rows="4" cols="50"></textarea>    
     <div class="form-row agree-checkbox">
       <input type="checkbox" id="agree" name="agree" required>
       <label for="agree">
         I agree to the 
-        <a href="terms.html" target="_blank">terms and conditions</a>
+        <a href="terms.html" target="_blank"  rel="noopener noreferrer">terms and conditions</a>
       </label>
     </div>
     <div class="submit-wrapper">
@@ -103,16 +128,16 @@
   </div>
   <div class="contact-icons">
          
-    <a href="https://www.linkedin.com/in/jordanwhiteutah" target="_blank" rel="noopener">
-      <i class="fab fa-linkedin"></i>
+    <a href="https://www.linkedin.com/in/jordanwhiteutah" target="_blank"  rel="noopener noreferrer">
+      <i class="fab fa-linkedin" aria-hidden="true"></i>
     </a>
   
  
     <a href="tel:+18018883793">
-      <i class="fas fa-phone"></i>
+      <i class="fas fa-phone" aria-hidden="true"></i>
     </a>
     <a href="mailto:jw@healingdancescapes.com">
-      <i class="fas fa-envelope"></i> 
+      <i class="fas fa-envelope" aria-hidden="true"></i> 
     </a>
   </div>
 </form>

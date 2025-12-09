@@ -77,6 +77,20 @@ header {
   padding: 20px;
   border-bottom: 2px solid #1b5e54;
 }
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+
 nav ul li a {
   color: #0A3C30;
 }
@@ -240,6 +254,11 @@ border-radius: 12px;
   opacity: 0;
   pointer-events: none;
 }
+.chip-group input[type="checkbox"]:focus + .chip {
+  outline: 3px solid #ffffff;       
+  outline-offset: 3px;
+  border-color: #ffffff;
+}
 
 
 .chip-group {
@@ -396,7 +415,7 @@ display: inline-block;}
   color: #333;
   text-align: center;         
 }
-.about p{
+.about p, h3{
   color: #333;
   text-align: left;         
 } 
@@ -405,12 +424,16 @@ display: inline-block;}
   flex: 1; 
   text-align: center;                  
 }
-.about p {
+.about p, h3{
   font-size: 1.2rem;
   line-height: 1.6;
   letter-spacing: 0.05em;
   padding: 0;     
   margin-top: 0;  
+  }
+
+  h3{
+    font-weight: normal;
   }
   
 
@@ -504,6 +527,21 @@ section, #intro, #about {
 #about {
   background-color: #3EBB9E;
 }
+
+.intro-section {
+  max-width: 1200px;
+  margin: 3rem auto;
+  padding: 1.5rem 2rem;
+}
+
+.intro-section p {
+  max-width: none;
+  margin: 0 auto;
+  padding: 0;
+}
+
+
+
 
 
 
