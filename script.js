@@ -1,7 +1,7 @@
 const tooltipTitles = {
   heart: {text: "Click Here to Step Into Wellness", url: "index.html"},
   rightArm: {text: "About", url: "about.html"},
-  head: "",
+  head: {text: "Gallery", url: "gallery.html"},
   back: { text:"Book A Session", url: "contact.html"}, 
   knee: { text:"FAQs", url: "faq.html"},
   leftHand: "",

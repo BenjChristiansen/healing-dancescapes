@@ -64,83 +64,90 @@
         </header>
         <h2 class="oswald-light text-center">Tell Me More About What I Can Do For You!</h2>
         <p class="quote">"Forget your troubles and dance! Forget your sorrows and dance! Forget your sickness and dance! Forget your weakness and dance!" - Bob Marley</p>
-<form>
+<form
+action="https://formspree.io/f/mvgewaoa"
+method="POST">
   <div class="form-row">
     <div class="half">
-    <label for="first-name">First Name:</label>
-    <input class="full-width rounded" required type="text" id="first-name" name="first-name">
+      <label for="first-name">First Name:</label>
+      <input class="full-width rounded" required type="text" id="first-name" name="first-name">
+    </div>
+    <div class="half">
+      <label for="last-name">Last Name:</label>
+      <input class="full-width rounded" required type="text" id="last-name" name="last-name">
+    </div>
   </div>
-  <div class="half">
-    <label for="last-name">Last Name:</label>
-    <input class="full-width rounded" required type="text" id="last-name" name="last-name">
-  </div>
-  </div>
+
   <div class="form-row">
     <div class="half">
-    <label for="email">Email:</label>
-
-    <input class="full-width rounded" required type="email" id="email" name="email">
+      <label for="email">Email:</label>
+      <input class="full-width rounded" required type="email" id="email" name="email">
+    </div>
+    <div class="half">
+      <label for="phone">Phone:</label>
+      <input class="full-width rounded" required type="tel" id="phone" name="phone">
+    </div>
   </div>
-  <div class="half">
-    <label for="phone">Phone:</label>
 
-    <input class="full-width rounded" required type="tel" id="phone" name="phone">
-  </div>
-  </div>                                                 
   <fieldset class="services">
     <legend class="visually-hidden">Service Selection Options</legend>
+
     <p class="section-label">In-Person Sessions:</p>
     <div class="chip-group">
-      <input type="checkbox" id="individual-in-person" name="individual-in-person" value="Individual In Person">
+
+      <input type="checkbox" id="individual-in-person" name="services[]" value="60 Min Individual Meditation (In Person)">
       <label class="chip" for="individual-in-person">60 Min Individual Meditation</label>
-  
-      <input type="checkbox" id="group-in-person" name="group-in-person" value="Group In Person">
+
+      <input type="checkbox" id="group-in-person" name="services[]" value="60 Min Group Meditation (In Person)">
       <label class="chip" for="group-in-person">60 Min Group Meditation</label>
-  
-      <input type="checkbox" id="wedding-in-person" name="wedding-in-person" value="Wedding Dance In Person">
+
+      <input type="checkbox" id="wedding-in-person" name="services[]" value="Choreographed Wedding Dance (In Person)">
       <label class="chip" for="wedding-in-person">Choreographed Wedding Dance</label>
     </div>
-  
+
     <p class="section-label">Virtual Sessions (Zoom):</p>
     <div class="chip-group">
-      <input type="checkbox" id="individual-virtual" name="individual-virtual" value="Individual Virtual">
+
+      <input type="checkbox" id="individual-virtual" name="services[]" value="60 Min Individual Meditation (Virtual)">
       <label class="chip" for="individual-virtual">60 Min Individual Meditation</label>
-  
-      <input type="checkbox" id="group-virtual" name="group-virtual" value="Group Virtual">
+
+      <input type="checkbox" id="group-virtual" name="services[]" value="60 Min Group Meditation (Virtual)">
       <label class="chip" for="group-virtual">60 Min Group Meditation</label>
     </div>
-  
-    <label class="section-label"for="other">Something Else? Please Explain:</label>
+
+    <label class="section-label" for="other">Something Else? Please Explain:</label>
     <textarea class="full-width rounded" name="other" id="other" rows="4"></textarea>
   </fieldset>
-        <label class="section-label"for="comments">Additional Comments or Questions:</label>
 
-    <textarea class="full-width rounded" id="comments" name="comments" rows="4" cols="50"></textarea>    
-    <div class="form-row agree-checkbox">
-      <input type="checkbox" id="agree" name="agree" required>
-      <label for="agree">
-        I agree to the 
-        <a href="terms.html" target="_blank"  rel="noopener noreferrer">terms and conditions</a>
-      </label>
-    </div>
-    <div class="submit-wrapper">
-    <input type="submit" class="contact-btn" value="Submit">
+  <label class="section-label" for="comments">Additional Comments or Questions:</label>
+  <textarea class="full-width rounded" id="comments" name="comments" rows="4"></textarea>
+
+  <div class="form-row agree-checkbox">
+    <input type="checkbox" id="agree" name="agree" required>
+    <label for="agree">
+      I agree to the 
+      <a href="terms.html" target="_blank" rel="noopener noreferrer">terms and conditions</a>
+    </label>
   </div>
+
+  <div class="submit-wrapper">
+    <button type="submit" class="contact-btn">Submit</button>
+  </div>
+
   <div class="contact-icons">
-         
-    <a href="https://www.linkedin.com/in/jordanwhiteutah" target="_blank"  rel="noopener noreferrer">
-      <i class="fab fa-linkedin" aria-hidden="true"></i>
+    <a href="https://www.linkedin.com/in/jordanwhiteutah" target="_blank" rel="noopener noreferrer">
+      <i class="fab fa-linkedin"></i>
     </a>
-  
- 
     <a href="tel:+18018883793">
-      <i class="fas fa-phone" aria-hidden="true"></i>
+      <i class="fas fa-phone"></i>
     </a>
     <a href="mailto:jw@healingdancescapes.com">
-      <i class="fas fa-envelope" aria-hidden="true"></i> 
+      <i class="fas fa-envelope"></i>
     </a>
   </div>
+
 </form>
+
 <script src="script.js"></script>
 </body>
 </html>
