@@ -8,25 +8,25 @@
   </url>
 
   <url>
-    <loc>https://healingdancescapes.com/about.html</loc>
+    <loc>https://healingdancescapes.com/about</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://healingdancescapes.com/contact.html</loc>
+    <loc>https://healingdancescapes.com/contact</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://healingdancescapes.com/gallery.html</loc>
+    <loc>https://healingdancescapes.com/gallery</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://healingdancescapes.com/faq.html</loc>
+    <loc>https://healingdancescapes.com/faq</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
